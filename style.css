@@ -1,0 +1,689 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+     font-family: "Rubik", sans-serif;
+     margin: 40px;
+     margin-top:  10px;
+}
+/* header */
+header{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+}
+/* header -- navibar */
+nav{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.header__tittle__1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(0,43,7);
+}
+.header__tittle__1 img{
+    width: 43.5px;
+}
+
+
+.header__tittle__2{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    position: relative;
+    left: -80px;
+      
+}
+.header__tittle a{
+    color: rgb(0,43,7);
+    text-decoration: none;  
+}
+
+.header__tittle__3{
+
+}
+.header__tittle__3 a{
+    padding: 5px;
+    color: white;
+    background-color: rgb(0,43,7);
+    border: solid rgb(0,43,7) 1px;
+    border-radius: 20px;
+}
+
+/* header -- description */
+.header__desc{
+    padding: 30px;
+    text-align: center;
+}
+.header__desc h1{
+    font-size: 54px;
+    color: rgb(0,43,7);
+    animation: dropdown 0.5s ease-in;
+    animation-delay: 0s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* header -- option */
+
+.header__opt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+}
+
+.header__opt a{
+    font-size: larger;
+    color: rgb(0,43,7);
+    text-decoration: none;  
+}
+
+
+/* header -- search bar */
+.Search{
+    display: flex;
+    gap:10px;
+    width: 100%;
+    background-color: white;
+    position: sticky;
+    z-index: 2;
+    top: 0px;
+}
+.search__logo{
+    display: none;
+}
+.header__search{
+    background-color: white;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    border-radius: 50px;
+    margin: 0px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+}
+.header__search--{
+    display: flex;
+    gap: 10px;
+    width: 75%;
+}
+.header__search input{
+    border: none;
+    flex-grow: 1;
+    
+}
+.header__search input:focus{
+    outline: none;
+}
+.header__search button{
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: black;
+    background-color: rgb(0, 211, 82);
+    border: solid black 1px;
+    border-radius: 50px;
+}
+
+/*main content */
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.exp{
+    background-color: #00EB5B;
+    border-radius: 20px;
+    height: 350px;
+    width: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+/* experience image hover  animation */
+.exp__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+    width: 65%;
+}
+.exp__img img{
+    position: absolute;
+    width: 100%;
+    border: solid black 1px;
+    border-radius: 20px;
+    transition: imgchange 0.7s ease-in-out;
+}
+.exp__img img.active{
+    opacity: 0;
+}
+
+
+/* experience description */
+.exp__desc{
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* iconic places */
+.ip{
+    margin-top: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+.ip h1{
+    padding-bottom: 20px;
+}
+
+.ip__pic{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pic__card{
+    flex-basis: 22%;
+    flex-grow: 1;
+    position: relative;
+}
+.pic__card img{
+    height: 100%;
+    width: 100%;
+    border: solid black 1px;
+    border-radius: 20px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.pic__card h1{
+    color: white;
+    position: absolute;
+    bottom: -15px;
+    left: 10px;
+}
+ .pic__card:hover img{
+    opacity: 0.85; 
+ }
+/* .pic__card:hover h1{
+    z-index: 1;
+    transform: scale(1.1);
+    bottom: 10px;
+    left: 35px;
+} */
+
+/* must dos */
+.md{
+    margin-top: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.md__card{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.card__1{
+    border: solid black 1px;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-basis: 45%;
+    flex-grow: 1;
+    gap: 20px;
+}
+.card__1 img{
+    width: 60%;
+    border-radius: 20px;
+}
+.card__1__d{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    
+}
+.d__d{
+    
+}
+.d__d p{
+    border: solid black 1px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* travellers choice */
+.tc-main{
+    margin-top: 10px;
+    padding: 10px;
+}
+.tc{
+    margin-top: 20px;
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+}
+.tc__img{
+    width: 40%;
+    position: relative;
+}
+.tc__img img{
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    
+}
+.tc__img h3{
+    color: aliceblue;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.tc__card{
+    width: 50%;
+}
+.tc__card--1{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.card--1{
+    flex-basis: 45%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.card--1 img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* big cities */
+.bc-main{
+    padding: 10px;
+    gap: 10px;
+}
+.bc-main h1{
+    margin-bottom: 5px;
+}
+.bc{
+    margin-top: 20px;
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.bc__card{
+    flex-grow: 1;
+    flex-basis: 24%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.bc__card img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* footer details */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    background-color:lightgrey;
+}
+.footer__d__t{
+    display: flex;
+    gap: 5px;
+}
+.footer__d__t img{
+    width: 23.5px;
+}
+.footer__d__a{
+    
+    display: flex;
+    flex-wrap:wrap ;
+    gap: 20px;
+}
+
+.footer__d__a a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+.footer__d__d{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button.ai{
+    background-color: #00EB5B;
+    padding: 10px;
+    border-radius: 20px;
+    position: fixed;
+    bottom: 80px;
+    right: 50px;
+}
+/* hover  */
+.header__opt a:hover{
+    text-decoration:underline;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+/* line 174 */
+.exp__img:hover img:nth-child(1){
+    opacity: 1;
+}
+.exp__img:hover img:nth-child(2){
+    opacity: 0;
+}
+
+.pic__card:hover img{
+    opacity: 0.85;
+}
+.card__1:hover img{
+    opacity: 0.85;
+}
+.card--1:hover img{
+    opacity: 0.85;
+}
+.tc__img:hover img{
+    opacity: 0.85;
+}
+.bc__card:hover img{
+    opacity: 0.85;
+}
+@keyframes dropdown {
+    0%{
+        opacity: 0;
+        transform:translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+        transform: scale(1.2);
+    }
+}
+
+
+
+/* Media Queries for 530px and below */
+/* Media Queries for 530px and below */
+@media screen and (max-width: 530px) {
+    body {
+        margin: 15px;
+        margin-top: 5px;
+    }
+
+    /* Navigation */
+    nav {
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px 0;
+    }
+    .header__tittle__2{
+        display: none;
+    }
+
+    .header__tittle__2 {
+        position: static;
+        left: 0;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header__tittle__2 a {
+        font-size: 14px;
+    }
+
+    /* Header Description */
+    .header__desc {
+        padding: 15px;
+    }
+
+    .header__desc h1 {
+        font-size: 24px;
+    }
+
+    /* Header Options */
+    .header__opt {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .header__opt a {
+        font-size: medium;
+    }
+
+    /* Sticky Search Bar with Logo */
+    .Search {
+       margin-left:-10px;
+       padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    /* Search bar logo/title section */
+    .search__logo {
+        display: flex;
+        width: fit-content;
+    }
+
+    .search__logo img {
+        width: 25px;
+    }
+
+    .header__search {
+        
+        width: 90%; 
+    }
+
+    .header__search-- {
+        width: 65%;
+        flex-grow: 1;
+    }
+
+    .header__search input {
+        font-size: 14px;
+        flex-grow: 1;
+    }
+
+    .header__search button {
+        display: none;
+    }
+
+    /* Experience Section */
+    .exp {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        padding: 20px;
+        overflow: hidden;
+    }
+
+    .exp__img {
+        width: 100%;
+        padding: 0;
+        min-height: 200px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .exp__img img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .exp__desc {
+        text-align: center;
+    }
+
+    /* Iconic Places - 2 cards per row */
+    .ip {
+        padding: 5px;
+    }
+
+    .ip h1 {
+        font-size: 24px;
+    }
+
+    .ip__pic {
+        gap: 8px;
+    }
+
+    .pic__card {
+        flex-basis: 48%;
+        min-height: 150px;
+    }
+
+    .pic__card h1 {
+        font-size: 14px;
+        bottom: -10px;
+        left: 5px;
+    }
+
+    /* Must Dos */
+    .md h1 {
+        font-size: 24px;
+    }
+
+    .md__card {
+        gap: 8px;
+    }
+
+    .card__1 {
+        flex-basis: 100%;
+        flex-direction: column;
+    }
+
+    .card__1 img {
+        width: 100%;
+    }
+
+    /* Travellers Choice - tc__img and 2 cards per row */
+    .tc-main h1 {
+        font-size: 24px;
+    }
+
+    .tc {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .tc__img {
+        width: 100%;
+    }
+
+    .tc__card {
+        width: 100%;
+    }
+
+    .tc__card--1 {
+        gap: 8px;
+    }
+
+    .card--1 {
+        flex-basis: 48%;
+    }
+
+    .card--1 h3 {
+        font-size: 14px;
+    }
+
+    .card--1 p {
+        font-size: 12px;
+    }
+
+    /* Big Cities - 2 cards per row */
+    .bc-main h1 {
+        font-size: 24px;
+    }
+
+    .bc {
+        gap: 8px;
+    }
+
+    .bc__card {
+        flex-basis: 48%;
+    }
+
+    .bc__card h3 {
+        font-size: 14px;
+    }
+
+    .bc__card p {
+        font-size: 12px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px;
+    }
+
+    .footer__d__a {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer__d__a a {
+        padding: 5px;
+    }
+
+    /* AI Button */
+    button.ai {
+        bottom: 20px;
+        right: 20px;
+        padding: 8px;
+    }
+}
